@@ -1,5 +1,4 @@
 from django.urls import path
-import urllib
 
 from app.views import index, bus_stations
 

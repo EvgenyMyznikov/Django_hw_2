@@ -23,9 +23,9 @@ def bus_stations(request):
     prev_page = None
     next_page = None
     if page.has_previous():
-        prev_page = page.previous_page_number()
+        prev_page = f'?page={page.previous_page_number()}'
     if page.has_next():
-        next_page = page.next_page_number()
+        next_page = f'?page={page.next_page_number()}'
     context = {
         'bus_stations': page,
         'current_page': page.number,
